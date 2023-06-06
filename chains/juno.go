@@ -18,7 +18,7 @@ var JunoChain = junoChain{
 		bech32Prefix:      "juno",
 		denom:             "ujunox",
 		keyAlgo:           KeyAlgoSecp256k1,
-		rpc:               "https://rpc.uni.juno.deuslabs.fi:443",
+		rpc:               "https://uni-rpc.reece.sh:443",
 		grpc:              "http://juno-testnet-grpc.polkachu.com:12690",
 		nftImplementation: CosmWasm,
 	},
