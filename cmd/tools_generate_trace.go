@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/gjermundgaraba/gon/chains"
+	"github.com/gjermundgaraba/nft-cli/chains"
 	"strings"
 )
 

@@ -2,13 +2,13 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/gjermundgaraba/gon/gorelayer"
 	"log"
 	"strings"
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/gjermundgaraba/gon/chains"
+	"github.com/gjermundgaraba/nft-cli/chains"
+	"github.com/gjermundgaraba/nft-cli/gorelayer"
 	"github.com/spf13/cobra"
 )
 

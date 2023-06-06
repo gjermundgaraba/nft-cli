@@ -13,7 +13,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
-	"github.com/gjermundgaraba/gon/chains"
+	"github.com/gjermundgaraba/nft-cli/chains"
 	"github.com/hashicorp/golang-lru/simplelru"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"

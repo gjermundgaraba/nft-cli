@@ -6,7 +6,7 @@ import (
 	wasmdtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/gjermundgaraba/gon/chains"
+	"github.com/gjermundgaraba/nft-cli/chains"
 	"github.com/spf13/cobra"
 	"github.com/tendermint/tendermint/libs/json"
 	"log"

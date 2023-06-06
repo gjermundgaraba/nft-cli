@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gjermundgaraba/gon/chains"
+	"github.com/gjermundgaraba/nft-cli/chains"
 )
 
 var (

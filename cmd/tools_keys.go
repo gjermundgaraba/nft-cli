@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto/hd"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/gjermundgaraba/gon/chains"
+	"github.com/gjermundgaraba/nft-cli/chains"
 	"github.com/spf13/cobra"
 	lensclient "github.com/strangelove-ventures/lens/client"
 	"github.com/strangelove-ventures/lens/client/codecs/ethermint"

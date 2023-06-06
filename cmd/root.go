@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	"os"
 
@@ -48,26 +47,15 @@ const (
 
 	toolsOption  OptionString = "Helper tools"
 	toolsCommand              = "tools"
-
-	gonToolsOption  OptionString = "GoN specific Tools"
-	gonToolsCommand              = "gon-tools"
 )
 
 func NewRootCmd(appHomeDir string) *cobra.Command {
 	encodingConfig := makeEncodingConfig()
 	initClientCtx := getInitialClientCtx(appHomeDir)
 	rootCmd := &cobra.Command{
-		Use:   "gon [optional-command]",
-		Short: "Game of NFTs - made simple!",
-		Long: fmt.Sprintf(`Game of NFTs - made simple!
-[optional-command] can be one of the following:
-- %s (creates a new NFT class)
-- %s (mints a new NFT)
-- %s (queries your NFTs)
-- %s (transfers an NFT over IBC)
-- %s (lists available connections between to chains)
-`, createNFTClassCommand, mintNFTCommand, queryNFTSCommand, transferNFTCommand, listConnectionsCommand),
-		Args: cobra.ArbitraryArgs,
+		Use:   "nft [optional-command]",
+		Short: "interchain nft cli",
+		Args:  cobra.ArbitraryArgs,
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
 			return persistentPreRun(cmd, initClientCtx, encodingConfig.Codec)
 		},
@@ -79,7 +67,6 @@ func NewRootCmd(appHomeDir string) *cobra.Command {
 				queryNFTSOption,
 				selfRelayOption,
 				toolsOption,
-				gonToolsOption,
 			}
 
 			var topLevelChoice OptionString
@@ -97,8 +84,6 @@ func NewRootCmd(appHomeDir string) *cobra.Command {
 					topLevelChoice = selfRelayOption
 				case toolsCommand:
 					topLevelChoice = toolsOption
-				case gonToolsCommand:
-					topLevelChoice = gonToolsOption
 				default:
 					panic("invalid command")
 				}
@@ -120,9 +105,6 @@ func NewRootCmd(appHomeDir string) *cobra.Command {
 				return nil
 			case toolsOption:
 				toolsInteractive(cmd, args)
-				return nil
-			case gonToolsOption:
-				gonToolsInteractive(cmd, args, appHomeDir)
 				return nil
 			default:
 				panic(topLevelChoice + " not implemented option")
