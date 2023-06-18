@@ -25,7 +25,7 @@ configure a relayer yourself, or relay anyone else's transactions.
 | Stargaze (GoN testnet) | ❌            | ❌         | ✅                        | ✅          |
 | Juno (GoN testnet)     | ❌            | ❌         | ✅                        | ✅          |
 | Uptick (GoN testnet)   | ❌            | ❌         | ✅                        | ✅          |
-| OmniFlix (GoN testnet) | ❌            | ❌         | ✅                        | ✅          |
+| OmniFlix (GoN testnet) | ✅            | ✅         | ✅                        | ✅          |
 
 Extra helper tools and features:
 
@@ -47,3 +47,12 @@ Extra helper tools and features:
 Next you can add the binary to your path or just use it from the current directory.
 
 You can also download the binary (for linux) from the releases page.
+
+## Future work
+
+- Add support for mainnets
+- Add support for self-config (with a config file and via the CLI itself)
+- Incorporate Stargaze indexer to make querying NFTs easier
+- Add user guide (both as a doc and inline in the CLI during operation to guide users better)
+- Better key management
+- Improve docs and contribution guidelines
